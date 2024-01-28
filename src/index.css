@@ -9,9 +9,35 @@ body {
 }
 
 .overlay {
-  background-color: #00000099;
+  background-color: #000000b2;
   width: 100%;
   height: 100%;
   position: absolute;
   inset: 0;
+}
+
+.shadow_custom {
+  box-shadow: 0 4px 4px 0px #0000001a;
+}
+
+/* slick ads*/
+.slick-dots {
+  bottom: -10px !important;
+}
+.slick-dots li {
+  margin: 0 !important;
+}
+.slick-dots button::before {
+  color: #8185c9 !important;
+}
+.slick-dots .slick-active button::before {
+  color: #373873 !important;
+}
+
+/* slick catogry */
+.category {
+  overflow-x: clip !important;
+}
+.category .slick-list {
+  overflow: visible !important;
 }

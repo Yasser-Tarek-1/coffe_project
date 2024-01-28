@@ -53,7 +53,7 @@ const SOCIAL_ICONS = [
 
 const Header = () => {
   return (
-    <div className="bg-[#F2F2F2] w-full h-[184px]  rounded-br-lg rounded-bl-[100px]">
+    <div className="bg-[#F2F2F2] w-full h-[184px]  rounded-br-lg rounded-bl-[100px] shadow_custom">
       {/* Top Header */}
       <div className="flex items-center justify-between mx-8 pt-[53px]">
         <Link to="/view">
@@ -61,8 +61,8 @@ const Header = () => {
         </Link>
         <Logo logo={logo_primary} />
         <div className="w-12 h-7 border-[2px] border-[#373873] rounded-lg cursor-pointer flex items-center justify-evenly">
-          <p className="uppercase text-base font-normal">AR</p>
-          <img src={arrow} alt="arrow_icon" className="w-[9px]" />
+          <p className="uppercase text-base font-normal text-[#373873]">AR</p>
+          <img src={arrow} alt="arrow_icon" className="w-[9px] block" />
         </div>
       </div>
       {/* Contact Us */}

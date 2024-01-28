@@ -11,11 +11,14 @@ import document from "./document.svg";
 import ad from "./ad.png";
 import search from "./search.svg";
 import filter from "./filter.svg";
-import swipImage from "./swipImage.png";
 import donut from "./donut.svg";
 import hot_cup from "./hot_cup.svg";
 import coffe_cup from "./coffe_cup.svg";
 import juice_cup from "./juice_cup.svg";
+import product_1 from "./product_1.png";
+import rate from "./rate.svg";
+import cal from "./cal.svg";
+import coffe_cup_pexels from "./coffe_cup_pexels.jpg";
 
 export {
   logo_primary,
@@ -31,9 +34,12 @@ export {
   ad,
   search,
   filter,
-  swipImage,
   donut,
   hot_cup,
   coffe_cup,
   juice_cup,
+  product_1,
+  rate,
+  cal,
+  coffe_cup_pexels,
 };
