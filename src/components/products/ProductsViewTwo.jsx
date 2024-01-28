@@ -23,18 +23,25 @@ const ProductsViewTwo = () => {
               <img src={cal} alt="cal" />
               <p className="text-[8px] font-medium text-[#8185C9]">450 CAL</p>
             </div>
-            <h3 className="text-[14px] font-bold leading-[16.8px] text-[#373873]">
+            <h3
+              dir="rtl"
+              className="text-[14px] font-bold leading-[16.8px] text-[#373873]"
+            >
               سبانش لاتيه
             </h3>
           </div>
           {/* Price */}
           <div className="flex items-center gap-2">
             {true && (
-              <h3 className="text-[12px] font-bold leading-[16.8px] text-[#FF0000] ">
+              <h3
+                dir="rtl"
+                className="text-[12px] font-bold leading-[16.8px] text-[#FF0000] "
+              >
                 12 ريال
               </h3>
             )}
             <h3
+              dir="rtl"
               className={`text-[12px] font-bold leading-[16.8px] text-[#373873] ${
                 true && "line-through decoration-[#FF0000]"
               }`}

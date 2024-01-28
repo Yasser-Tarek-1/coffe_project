@@ -11,7 +11,7 @@ const CartAdd = () => {
     }
   };
   return (
-    <div className="flex items-center gap-[13px]">
+    <div className="flex items-center gap-2 mr-1">
       <button
         onClick={() => counterHandler("dec")}
         className="w-4 h-4 bg-[#8185C9] rounded-full flex items-center justify-center text-[#fff]  text-sm"
