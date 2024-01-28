@@ -1,6 +1,6 @@
 import { product_1, rate, cal } from "../../assets";
 import CartAdd from "./CartAdd";
-const ProductsView2 = () => {
+const ProductsViewTwo = () => {
   return (
     <div className="w-full min-h-[109px] rounded-2xl px-4 pt-3 pb-[2px] bg-[#F2F2F2] relative shadow_custom">
       {/* Discount */}
@@ -67,4 +67,4 @@ const ProductsView2 = () => {
   );
 };
 
-export default ProductsView2;
+export default ProductsViewTwo;

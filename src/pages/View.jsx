@@ -1,8 +1,8 @@
 import Header from "../components/Header";
 import { ad, search, filter } from "../assets";
 import CategorySwip from "../components/CategorySwip";
-import ProductsView1 from "../components/products/productsView1";
-import ProductsView2 from "../components/products/ProductsView2";
+import ProductsViewOne from "../components/products/ProductsViewOne";
+import ProductsViewTwo from "../components/products/ProductsViewTwo";
 import Footer from "../components/Footer";
 import Slider from "react-slick";
 
@@ -71,13 +71,13 @@ const View = () => {
           {toggle ? (
             <div className="w-full h-full grid grid-cols-2 gap-4">
               {products.map(({ id }) => {
-                return <ProductsView1 key={id} />;
+                return <ProductsViewOne key={id} />;
               })}
             </div>
           ) : (
             <div className="w-full h-full flex flex-col gap-[18px]">
               {products.map(({ id }) => {
-                return <ProductsView2 key={id} />;
+                return <ProductsViewTwo key={id} />;
               })}
             </div>
           )}
