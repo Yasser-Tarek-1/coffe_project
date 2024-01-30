@@ -4,7 +4,7 @@ import CartItem from "../components/cart/CartItem";
 
 const Cart = () => {
   return (
-    <div className="min-h-screen h-full relative w-full bg-white ">
+    <div className="min-h-screen pb-[380px] h-full relative w-full bg-white ">
       {/* Head */}
       <div className="w-full h-24 bg-base shadow_custom rounded-b-lg flex items-center justify-between pt-12 px-4">
         <div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ const Cart = () => {
         </div>
       </div>
       {/* Footer */}
-      <div className="w-full bg-white absolute bottom-1 left-0 py-8 shadow_custom_cart rounded-t-[27px]  px-4">
+      <div className="w-full h-[350px] bg-white absolute bottom-1 left-0 py-8 shadow_custom_cart rounded-t-[27px]  px-4">
         <h3 className="text-primary text-center text-[16px] font-bold mb-3">
           ملخص الطلب
         </h3>
