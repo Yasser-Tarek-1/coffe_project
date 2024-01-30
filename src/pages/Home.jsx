@@ -1,29 +1,34 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Logo from "../components/Logo";
-import { logo_white } from "../assets";
+import { logo_white, home } from "../assets";
 
 const Home = () => {
   return (
-    <div className="bg-home min-h-screen h-full relative">
-      <div className="overlay">
+    <div
+      className="min-h-screen h-full relative bg-no-repeat bg-cover bg-center object-cover"
+      style={{ backgroundImage: `url(${home})`, objectFit: "cover" }}
+    >
+      <div className="bg-[#000000b2] w-full h-full inset-0 absolute">
         <div className="mt-16">
           <Logo logo={logo_white} />
         </div>
 
-        <div className="w-full my-[73px] h-[38px] bg-[#FCBD1F] font-medium text-[24px] text-[#373873] text-center">
+        <div className="w-full my-[73px] h-[38px] bg-secondary font-medium text-[22px] text-primary text-center">
           متجر ( عين سكر) يرحب بكم من جديد
         </div>
         <div className="flex flex-col items-center gap-[48px]">
           <Link to={"/view"}>
-            <Button style="bg-[#373873] text-[#fff] hover:bg-[#404183]">
+            <Button style="bg-primary text-[#fff] hover:bg-[#404183]">
               اطلب الآن
             </Button>
           </Link>
-          <Button style="bg-[#F2F2F2] text-[#373873] ">
-            رفع اقتراح أو شكوى
-          </Button>
-          <Button style="bg-[#F2F2F2] text-[#373873] ">من نحن</Button>
+          <Link to={"/contactus"}>
+            <Button style="bg-base text-primary ">رفع اقتراح أو شكوى</Button>
+          </Link>
+          <Link to={"/aboutus"}>
+            <Button style="bg-base text-primary ">من نحن</Button>
+          </Link>
         </div>
       </div>
     </div>

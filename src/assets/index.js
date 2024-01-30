@@ -1,3 +1,4 @@
+import home from "./home.png";
 import logo_primary from "./logo_primary.svg";
 import logo_white from "./logo_white.svg";
 import cart from "./cart.svg";
@@ -19,8 +20,12 @@ import product_1 from "./product_1.png";
 import rate from "./rate.svg";
 import cal from "./cal.svg";
 import coffe_cup_pexels from "./coffe_cup_pexels.jpg";
+import doc_icon from "./doc_icon.svg";
+import arrow_back from "./arrow_back.svg";
+import close from "./close.svg";
 
 export {
+  home,
   logo_primary,
   logo_white,
   cart,
@@ -42,4 +47,7 @@ export {
   rate,
   cal,
   coffe_cup_pexels,
+  doc_icon,
+  arrow_back,
+  close,
 };

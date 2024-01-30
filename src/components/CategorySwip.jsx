@@ -4,6 +4,7 @@ import {
   hot_cup,
   juice_cup,
   coffe_cup_pexels,
+  home,
 } from "../assets";
 import Slider from "react-slick";
 
@@ -84,11 +85,9 @@ const CategorySwip = () => {
           return (
             <div className="w-full" key={id}>
               <div
-                className={`relative w-20 h-20 rounded-full flex justify-center shadow_custom`}
+                className={`relative w-20 h-20 rounded-full flex justify-center bg-cover bg-center object-cover shadow_custom`}
                 style={{
                   backgroundImage: `url(${img})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
                 }}
               >
                 <div className="inset-0 absolute h-20 w-20 bg-[#000000B2] rounded-full z-10"></div>
@@ -99,7 +98,7 @@ const CategorySwip = () => {
                   </h4>
                 </div>
                 {modern && (
-                  <p className="bg-[#FCBD1F] flex items-center justify-center w-[35px] h-[17px] z-30 text-[8px] font-normal text-center rounded-lg absolute left-[50%] bottom-[-10px] translate-x-[-50%] ">
+                  <p className="bg-secondary flex items-center justify-center w-[35px] h-[17px] z-30 text-[8px] font-normal text-center rounded-lg absolute left-[50%] bottom-[-10px] translate-x-[-50%] ">
                     جديد
                   </p>
                 )}

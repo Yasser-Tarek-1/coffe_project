@@ -4,20 +4,15 @@
 @tailwind utilities;
 
 body {
-  background-color: #d1d5db;
+  background-color: #838486;
   font-family: "Tajawal";
-}
-
-.overlay {
-  background-color: #000000b2;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
 }
 
 .shadow_custom {
   box-shadow: 0 4px 4px 0px #0000001a;
+}
+.shadow_custom_cart {
+  box-shadow: 4px 0px 4px 0px #0000001a;
 }
 
 /* slick ads*/
