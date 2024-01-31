@@ -87,7 +87,7 @@ const Products = ({ toggle, products }) => {
                         name={name}
                         data-value={name}
                         onClick={() => checkedSizeHandler(name)}
-                        className={`border-primary border-[1px] flex-col cursor-pointer w-16 h-7 rounded-lg text-[10px] font-normal leading-3 flex items-center justify-center
+                        className={`border-primary py-1 border-[1px]  flex-col cursor-pointer w-16 h-7 rounded-lg text-[10px] font-normal leading-3 flex items-center justify-center
                   ${
                     checkedSize == name
                       ? "text-white bg-primary"
@@ -112,7 +112,7 @@ const Products = ({ toggle, products }) => {
               <div className="bg-secondary1 border-secondary1 border-[1px] min-w-16 min-h-7 rounded-lg text-[10px] font-normal leading-3 text-white flex items-center justify-center">
                 الإضافات
               </div>
-              <ul className="w-full flex items-center gap-2 flex-wrap">
+              <ul className="w-full flex items-center gap-1 flex-wrap">
                 {additions.map(({ id, price, name }) => {
                   return (
                     <li key={id}>
@@ -129,7 +129,7 @@ const Products = ({ toggle, products }) => {
                   `}
                       >
                         <div className="flex items-center justify-center gap-1 px-2">
-                          <span>{name}</span> + <span>{price}</span>
+                          <span>{name}</span> + <span>{price} ريال</span>
                         </div>
                       </label>
                     </li>
@@ -141,7 +141,7 @@ const Products = ({ toggle, products }) => {
           {/* Modal Footer */}
           <div className="w-full absolute bottom-1 left-0 py-2 px-4 flex items-center gap-4">
             <CounterCart />
-            <button className="rounded-lg text-[16px] h-8  transition-all bg-primary py-1 px-4 text-[#fff] flex items-center justify-between w-full">
+            <button className="rounded-lg text-[16px] min-h-8 transition-all bg-primary py-1 px-4 text-[#fff] flex items-center justify-between w-full">
               <p className="text-[10px] font-medium">اضف للسلة</p>
               <p className="text-[16px] text-secondary font-normal">12 ريال</p>
             </button>
