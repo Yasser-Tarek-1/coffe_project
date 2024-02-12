@@ -1,0 +1,49 @@
+{
+  "home": {
+    "store": "Store",
+    "welcome": "Welcome Back",
+    "order": "Order Now",
+    "send": "Submit Suggestion or Complaint",
+    "aboutUs": "About Us"
+  },
+  "view": {
+    "contactUs": "Contact Us",
+    "inputPlacholder": "Search",
+    "discount": "discount",
+    "currency": "R.S",
+    "tax": "All prices include tax",
+    "send": "Do you have a suggestion or complaint?"
+  },
+  "modal": {
+    "addOns": "Add-Ons",
+    "addCart": "Add to Cart"
+  },
+  "cart": {
+    "cart": "Cart",
+    "cartEmpty": "Cart is Empty",
+    "goBack": "Go Back",
+    "orders": "My Orders",
+    "size": "Size",
+    "nots": "Notes",
+    "orderSummary": "Order Summary",
+    "orderTotal": "Order Total",
+    "discount": "Discount Code",
+    "total": "Total including tax",
+    "getOrder": "Complete Order"
+  },
+  "contactus": {
+    "suggestions": "Suggestions and Complaints",
+    "aboutus": "About Us",
+    "us": " Us",
+    "about": "We always welcome your suggestions, feedback, and all complaints to improve the service provided to you",
+    "complaint": "File a Complaint",
+    "suggestion": "Submit a Suggestion",
+    "name": "Customer Name",
+    "phone": "Phone Number",
+    "text": "Entered Text",
+    "write": "Enter text",
+    "send": "Send",
+    "thx": "We thank you for helping us improve the service provided to you. We will respond to you as soon as possible",
+    "homePage": "Home Page"
+  }
+}

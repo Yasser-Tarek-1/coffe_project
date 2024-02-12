@@ -158,5 +158,4 @@ Comprehensive testing is conducted to ensure the functionality, performance, and
 - [Redux Toolkit Documentation](https://redux-toolkit.js.org/usage/usage-guide)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
 - [Slick Documentation](https://kenwheeler.github.io/slick/)
-- [Slick Documentation](https://kenwheeler.github.io/slick/)
 - [React i18next Documentation](https://react.i18next.com/)

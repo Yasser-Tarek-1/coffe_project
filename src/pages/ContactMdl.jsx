@@ -1,8 +1,10 @@
 import Modal from "../components/modal/Modal";
 import { Link } from "react-router-dom";
 import { home } from "../assets";
+import { useTranslation } from "react-i18next";
 
 export const ContactMdl = () => {
+  const { t } = useTranslation();
   return (
     <div
       className="min-h-screen h-full relative bg-no-repeat bg-cover bg-center object-cover"
@@ -15,11 +17,10 @@ export const ContactMdl = () => {
         </div>
         <div className=" text-primary h-32 text-center flex items-center flex-col justify-center w-[60%] mx-auto">
           <p className="text-[14px] font-medium leading-4">
-            نشكركم على مساعدتنا في رفع الخدمة المقدمة إليكم سوف يتم الرد عليكم
-            في أقرب وقت ممكن
+            {t("contactus.thx")}
           </p>
           <Link to={"/"} className="underline font-semibold mt-2">
-            الصفجة الرئيسية
+            {t("contactus.homePage")}
           </Link>
         </div>
       </Modal>

@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 import { store } from "./store/store";
 import { Provider } from "react-redux";
+import "./i18n";
 import "./global.css";
 // slick
 import "slick-carousel/slick/slick.css";

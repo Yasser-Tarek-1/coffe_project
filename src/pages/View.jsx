@@ -1,20 +1,18 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import { ad, search, filter } from "../assets";
-import CategorySwip from "../components/CategorySwip";
+import CategorySlide from "../components/Categories/CategorySlide";
 import Footer from "../components/Footer";
 import Slider from "react-slick";
 import Products from "../components/products/Products";
-
-const products = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
+import { useTranslation } from "react-i18next";
 
 const View = () => {
+  const { t } = useTranslation();
   const [toggle, setToggle] = useState(true);
-
   const toggleShow = () => {
     setToggle(!toggle);
   };
-
   const settings = {
     dots: true,
     autoplay: true,
@@ -27,7 +25,7 @@ const View = () => {
   };
 
   return (
-    <div className="w-full min-h-screen relative bg-white">
+    <div className="w-full min-h-screen h-full relative bg-white pb-36">
       <Header />
       <div className="px-4">
         {/* ads */}
@@ -64,7 +62,7 @@ const View = () => {
         <div className="flex items-center gap-4 mt-10">
           <div className="w-full h-7 border-2 border-primary rounded-lg cursor-pointer flex items-cente justify-between px-3">
             <input
-              placeholder="بحث"
+              placeholder={t("view.inputPlacholder")}
               className="block w-full bg-transparent outline-none border-none  text-primary "
             />
             <img src={search} alt="filter" className="w-3" />
@@ -74,9 +72,9 @@ const View = () => {
           </button>
         </div>
         {/* CategorySwip */}
-        <CategorySwip />
+        <CategorySlide />
         {/* Products */}
-        <Products products={products} toggle={toggle} />
+        <Products toggle={toggle} />
       </div>
       <Footer />
     </div>

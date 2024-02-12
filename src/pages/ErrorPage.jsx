@@ -21,7 +21,7 @@ const ErrorPage = () => {
         </svg>
       </div>
       <p className="mt-4 text-gray-600">
-        دعونا نعيدك إلى{" "}
+        دعونا نعيدك إلى
         <Link to="/" className="text-blue-500">
           الصفحة الرئسية
         </Link>
