@@ -16,7 +16,7 @@ const Home = () => {
           <Logo logo={logo_white} />
         </div>
 
-        <div className="w-full my-[73px] h-[38px] bg-secondary font-medium text-[22px] text-primary text-center">
+        <div className="w-full my-[73px] h-[38px] bg-secondary font-medium text-[22px] text-primary text-center flex items-center justify-center">
           <span>{t("home.store")}</span> <span>(عين سكر)</span>{" "}
           <span>{t("home.welcome")}</span>
         </div>

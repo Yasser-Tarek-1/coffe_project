@@ -63,11 +63,11 @@ const View = () => {
           <div className="w-full h-7 border-2 border-primary rounded-lg cursor-pointer flex items-cente justify-between px-3">
             <input
               placeholder={t("view.inputPlacholder")}
-              className="block w-full bg-transparent outline-none border-none  text-primary "
+              className=" w-full h-full text-start flex items-center justify-center bg-transparent outline-none border-none text-primary "
             />
-            <img src={search} alt="filter" className="w-3" />
+            <img src={search} alt="filter" className="w-4 block ms-3" />
           </div>
-          <button className="w-7" onClick={toggleShow}>
+          <button className="w-7 block" onClick={toggleShow}>
             <img src={filter} alt="filter" className="w-7" />
           </button>
         </div>
