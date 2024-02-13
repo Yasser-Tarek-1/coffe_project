@@ -41,7 +41,7 @@ const ProductsViewOne = ({
       <img
         src={`https://backend.skilltax.sa/public/${image}`}
         alt="img"
-        className="max-h-[111px] w-full object-cover"
+        className="h-[111px] w-full object-cover"
       />
       <div className="p-2 min-h-[58px] flex flex-col justify-between">
         {/* Deatials */}

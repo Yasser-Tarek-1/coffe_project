@@ -1,10 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-const MENU_ID = "700000";
+
+let MENU_ID = process.env.REACT_APP_MENU_ID;
+let API_URL = process.env.REACT_APP_API_URL;
 
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: `https://backend.skilltax.sa/api/v1/menu/`,
+    baseUrl: API_URL,
   }),
   endpoints: (builder) => ({
     getProducts: builder.query({

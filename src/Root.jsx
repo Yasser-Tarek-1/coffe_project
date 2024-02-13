@@ -15,6 +15,12 @@ function Root() {
     document.documentElement.setAttribute("dir", i18n.dir());
     document.documentElement.setAttribute("lang", i18n.language);
   }, [i18n, i18n.language]);
+
+  useEffect(() => {
+    window.process = {
+      ...window.process,
+    };
+  }, []);
   return (
     <div className="w-full max-w-[480px] mx-auto min-h-screen h-full relative">
       <Outlet />
