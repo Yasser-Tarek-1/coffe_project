@@ -75,11 +75,13 @@ const Header = () => {
             <p className="uppercase text-base font-normal text-primary h-full">
               {lan == "ar" ? "AR" : "EN"}
             </p>
-            <img
-              src={arrow}
-              alt="arrow_icon"
-              className="w-[9px] block h-full"
-            />
+            <p>
+              <img
+                src={arrow}
+                alt="arrow_icon"
+                className="w-[9px] block h-full"
+              />
+            </p>
           </button>
           {isOpen && (
             <div className="absolute bg-primary uppercase text-base font-normal text-white left-0 top-[26px] rounded-lg w-12 flex items-center flex-col">
