@@ -82,7 +82,7 @@ const ContactUs = () => {
             {t("contactus.phone")}{" "}
           </label>
           <div
-            className="h-12 bg-base shadow_custom rounded-lg overflow-hidden flex items-center"
+            className="h-12 bg-base rounded-lg overflow-hidden flex items-center"
             dir="ltr"
           >
             <p className="w-[20%] text-primary border-r border-r-[#d4d1d1] h-full flex items-center justify-center">
