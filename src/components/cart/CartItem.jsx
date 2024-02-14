@@ -98,7 +98,7 @@ const CartItem = ({
             {/* Additions */}
             <div className="flex flex-col gap-1">
               <p className="text-[#37387380] text-[8px] font-bold">
-                {t("cart.size")}
+                {t("cart.size")}:
               </p>
               <p className="text-[#37387380] text-[8px] font-bold flex items-center gap-1">
                 {t("modal.addOns")}:
@@ -109,7 +109,7 @@ const CartItem = ({
                 </p>
               </p>
               <p className="text-[#37387380] text-[8px] font-bold">
-                {t("cart.nots")}
+                {t("cart.notes")}:
               </p>
             </div>
           </div>
