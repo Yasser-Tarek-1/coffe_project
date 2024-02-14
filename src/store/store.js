@@ -1,6 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { productsApi, informationApi, settingsApi, messagesApi } from "./apis";
+import {
+  productsApi,
+  basicInformationApi,
+  settingsApi,
+  messagesApi,
+} from "./apis";
 import modalSlice from "./slices/modalSlice";
 import cartSlice from "./slices/cartSlice";
 import filterDataSlice from "./slices/filterDataSlice";
@@ -8,7 +13,7 @@ import filterDataSlice from "./slices/filterDataSlice";
 export const store = configureStore({
   reducer: {
     [productsApi.reducerPath]: productsApi.reducer,
-    [informationApi.reducerPath]: informationApi.reducer,
+    [basicInformationApi.reducerPath]: basicInformationApi.reducer,
     [settingsApi.reducerPath]: settingsApi.reducer,
     [messagesApi.reducerPath]: messagesApi.reducer,
     modalSlice,
@@ -18,7 +23,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .concat(productsApi.middleware)
-      .concat(informationApi.middleware)
+      .concat(basicInformationApi.middleware)
       .concat(settingsApi.middleware)
       .concat(messagesApi.middleware),
 });

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Button from "../components/layout/Button";
 import Logo from "../components/layout/Logo";
 import { home } from "../assets";
-import { useGetInformationQuery } from "../store/apis/information";
+import { useGetInformationQuery } from "../store/apis/basicInformation";
 
 const Home = () => {
   const { data } = useGetInformationQuery();

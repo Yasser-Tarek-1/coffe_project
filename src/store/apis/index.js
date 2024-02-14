@@ -1,6 +1,6 @@
 import { productsApi } from "./products";
-import { informationApi } from "./information";
+import { basicInformationApi } from "./basicInformation";
 import { settingsApi } from "./settings";
 import { messagesApi } from "./messages";
 
-export { productsApi, informationApi, settingsApi, messagesApi };
+export { productsApi, basicInformationApi, settingsApi, messagesApi };

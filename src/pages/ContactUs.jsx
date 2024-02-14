@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { doc_icon, arrow_back } from "../assets";
 import { useTranslation } from "react-i18next";
 import ContactUsForm from "../components/ContactUs/ContactUsForm";
-import { useGetInformationQuery } from "../store/apis/information";
+import { useGetInformationQuery } from "../store/apis/basicInformation";
 
 const ContactUs = () => {
   const { data } = useGetInformationQuery();
