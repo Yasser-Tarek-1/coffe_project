@@ -61,7 +61,7 @@ const ContactUs = () => {
       <div className="w-full h-24 bg-base shadow-all rounded-b-lg flex items-center justify-between pt-12 px-4">
         <div className="flex items-center gap-2">
           <img src={doc_icon} alt="doc_icon" className="w-6" />
-          <h3 className="text-xl font-bold leading-6 text-primary">
+          <h3 className="mt-[6px] text-xl font-bold leading-6 text-primary">
             {t("contactus.suggestions")}
           </h3>
         </div>
