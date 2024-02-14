@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { useGetSettingsQuery } from "../../store/apis/settings";
+import { useGetSettingsQuery } from "../../store/apis/menuSettings";
 
 const Ads = () => {
   const { data } = useGetSettingsQuery();

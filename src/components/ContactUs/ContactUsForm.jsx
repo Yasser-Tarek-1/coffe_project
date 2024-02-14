@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import toast from "react-hot-toast";
-import { useSendMsgMutation } from "../../store/apis/messages";
+import { useSendMsgMutation } from "../../store/apis/userMessages";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 

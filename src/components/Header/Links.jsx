@@ -1,4 +1,4 @@
-import { useGetSettingsQuery } from "../../store/apis/settings";
+import { useGetSettingsQuery } from "../../store/apis/menuSettings";
 import {
   phone,
   snapchat,

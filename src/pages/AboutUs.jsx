@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Header from "../components/Header/Header";
-import { useGetSettingsQuery } from "../store/apis/settings";
+import { useGetSettingsQuery } from "../store/apis/menuSettings";
 
 const AboutUs = () => {
   const { data } = useGetSettingsQuery();

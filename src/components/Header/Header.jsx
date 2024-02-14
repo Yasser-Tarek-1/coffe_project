@@ -3,7 +3,7 @@ import { cart, arrow } from "../../assets";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { useGetInformationQuery } from "../../store/apis/information";
+import { useGetInformationQuery } from "../../store/apis/basicInformation";
 import Links from "./Links";
 
 const Header = () => {

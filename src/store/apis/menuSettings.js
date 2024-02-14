@@ -1,10 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 let MENU_ID = 700000;
-let API_URL = process.env.REACT_APP_API_URL;
+let API_URL = "https://backend.skilltax.sa/api/v1/menu/";
 
-export const settingsApi = createApi({
-  reducerPath: "settingsApi",
+export const menuSettingsApi = createApi({
+  reducerPath: "menuSettingsApi",
   baseQuery: fetchBaseQuery({
     baseUrl: API_URL,
   }),
@@ -15,4 +15,4 @@ export const settingsApi = createApi({
   }),
 });
 
-export const { useGetSettingsQuery } = settingsApi;
+export const { useGetSettingsQuery } = menuSettingsApi;

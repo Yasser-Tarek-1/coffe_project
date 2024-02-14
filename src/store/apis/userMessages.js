@@ -1,11 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 let MENU_ID = 700000;
-let API_URL = process.env.REACT_APP_API_URL;
+let API_URL = "https://backend.skilltax.sa/api/v1/menu/";
 
-// Define an API slice using createApi
-export const messagesApi = createApi({
-  reducerPath: "messagesApi",
+export const userMessagesApi = createApi({
+  reducerPath: "userMessagesApi",
   baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
   endpoints: (builder) => ({
     sendMsg: builder.mutation({
@@ -18,4 +17,4 @@ export const messagesApi = createApi({
   }),
 });
 
-export const { useSendMsgMutation } = messagesApi;
+export const { useSendMsgMutation } = userMessagesApi;
