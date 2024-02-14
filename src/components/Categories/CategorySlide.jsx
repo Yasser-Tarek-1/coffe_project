@@ -1,9 +1,6 @@
 import Slider from "react-slick";
 import { useGetCategoriesQuery } from "../../store/apis/products";
 import CategoryItem from "./CategoryItem";
-import { useEffect } from "react";
-import { useState } from "react";
-import { useSelector } from "react-redux";
 
 const settings = {
   dots: false,
@@ -20,7 +17,7 @@ const CategorySlide = () => {
 
   return (
     <div className="mt-4 category">
-      {!isLoading && isSuccess && data?.length >= 4 ? (
+      {!isLoading && isSuccess && data?.length >= 3 ? (
         <Slider {...settings}>
           <CategoryItem />
           {data?.map(({ id, ...items }) => {
