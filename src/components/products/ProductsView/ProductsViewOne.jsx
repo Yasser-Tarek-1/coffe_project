@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { product_1, rate, cal } from "../../../assets";
+import { rate, cal } from "../../../assets";
 import CounterCart from "../../layout/CounterCart";
 import { useTranslation } from "react-i18next";
 const ProductsViewOne = ({

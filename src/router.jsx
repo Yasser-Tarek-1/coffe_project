@@ -6,7 +6,7 @@ import ErrorPage from "./pages/ErrorPage";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import Cart from "./pages/Cart";
-import { ContactMdl } from "./pages/ContactMdl";
+import ContactMdl from "./pages/ContactMdl";
 
 export const router = createBrowserRouter([
   {

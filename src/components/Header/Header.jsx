@@ -1,59 +1,13 @@
-import Logo from "./Logo";
-import {
-  logo_primary,
-  cart,
-  arrow,
-  phone,
-  snapchat,
-  instgram,
-  tiktok,
-  twitter,
-  document,
-} from "../assets";
+import Logo from "../layout/Logo";
+import { cart, arrow } from "../../assets";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-
-const SOCIAL_ICONS = [
-  {
-    id: 11,
-    icon: document,
-    alt: "document",
-    href: "/contactus",
-  },
-  {
-    id: 22,
-    icon: twitter,
-    alt: "twitter",
-    href: "#",
-  },
-  {
-    id: 33,
-    icon: tiktok,
-    alt: "tiktok",
-    href: "#",
-  },
-  {
-    id: 44,
-    icon: instgram,
-    alt: "instgram",
-    href: "#",
-  },
-  {
-    id: 55,
-    icon: snapchat,
-    alt: "snapchat",
-    href: "#",
-  },
-  {
-    id: 66,
-    icon: phone,
-    alt: "phone",
-    href: "#",
-  },
-];
+import { useGetInformationQuery } from "../../store/apis/Information";
+import Links from "./Links";
 
 const Header = () => {
+  const { data } = useGetInformationQuery();
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const lan = i18n.language;
@@ -91,7 +45,7 @@ const Header = () => {
           )}
         </div>
         <Link to={"/"}>
-          <Logo logo={logo_primary} />
+          <Logo logo={`https://backend.skilltax.sa/public/${data?.logo}`} />
         </Link>
         <Link to="/cart">
           <img src={cart} alt="cart_icon" className="w-7" />
@@ -107,19 +61,7 @@ const Header = () => {
           {t("view.contactUs")}
         </p>
         {/* SOCIAL_ICONS */}
-        <div className="flex items-center justify-center gap-4">
-          {SOCIAL_ICONS.map(({ id, alt, icon, href }) => {
-            return alt == "document" ? (
-              <Link to={href} key={id}>
-                <img src={icon} alt={alt} className="w-6" />
-              </Link>
-            ) : (
-              <a href={href} key={id}>
-                <img src={icon} alt={alt} className="w-6" />
-              </a>
-            );
-          })}
-        </div>
+        <Links />
       </div>
     </div>
   );

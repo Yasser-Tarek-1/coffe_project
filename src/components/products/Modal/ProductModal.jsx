@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { rate } from "../../assets";
-import Modal from "../modal/Modal";
-import CounterCart from "../layout/CounterCart";
+import { rate } from "../../../assets";
+import Modal from "../../modal/Modal";
+import CounterCart from "../../layout/CounterCart";
 import { useState } from "react";
-import { addToCart } from "../../store/slices/cartSlice";
+import { addToCart } from "../../../store/slices/cartSlice";
 import { useTranslation } from "react-i18next";
+import toast from "react-hot-toast";
 
 const ProductModal = ({ isOpen, closeModalHandler }) => {
   const {
@@ -76,6 +77,7 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
     };
     dispatch(addToCart(product));
     closeModalAndClearModalHandler();
+    language == "ar" ? toast.success("تمت الاضافة") : toast.success("Added");
   };
 
   return (

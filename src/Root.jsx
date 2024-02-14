@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
@@ -23,6 +24,11 @@ function Root() {
   }, []);
   return (
     <div className="w-full max-w-[480px] mx-auto min-h-screen h-full relative">
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{ duration: 1500 }}
+      />
       <Outlet />
     </div>
   );

@@ -1,7 +1,7 @@
 {
   "home": {
     "store": "Store",
-    "welcome": "Welcome Back",
+    "welcome": "Welcome back",
     "order": "Order Now",
     "send": "Submit Suggestion or Complaint",
     "aboutUs": "About Us"
@@ -9,13 +9,13 @@
   "view": {
     "contactUs": "Contact Us",
     "inputPlacholder": "Search",
-    "discount": "discount",
-    "currency": "R.S",
+    "discount": "Discount",
+    "currency": "Riyal",
     "tax": "All prices include tax",
     "send": "Do you have a suggestion or complaint?"
   },
   "modal": {
-    "addOns": "Add-Ons",
+    "addOns": "Add-ons",
     "addCart": "Add to Cart"
   },
   "cart": {
@@ -24,26 +24,32 @@
     "goBack": "Go Back",
     "orders": "My Orders",
     "size": "Size",
-    "nots": "Notes",
+    "notes": "Notes",
     "orderSummary": "Order Summary",
     "orderTotal": "Order Total",
     "discount": "Discount Code",
-    "total": "Total including tax",
+    "total": "Total including Tax",
     "getOrder": "Complete Order"
   },
   "contactus": {
     "suggestions": "Suggestions and Complaints",
     "aboutus": "About Us",
     "us": " Us",
-    "about": "We always welcome your suggestions, feedback, and all complaints to improve the service provided to you",
-    "complaint": "File a Complaint",
-    "suggestion": "Submit a Suggestion",
+    "about": "We always welcome your suggestions, feedback, and all complaints to improve the service provided to you.",
+    "complaint": "File Complaint",
+    "suggestion": "Submit Suggestion",
     "name": "Customer Name",
     "phone": "Phone Number",
-    "text": "Entered Text",
+    "text": "Message",
     "write": "Enter text",
     "send": "Send",
-    "thx": "We thank you for helping us improve the service provided to you. We will respond to you as soon as possible",
-    "homePage": "Home Page"
-  }
+    "thx": "Thank you for assisting us in improving the service provided to you. We will respond to you as soon as possible.",
+    "homePage": "Home Page",
+    "form": {
+      "required": "This field is required",
+      "phoneStart": "Phone number must start with the digit 5",
+      "phoneNumber": "Phone number must be 9 digits long"
+    }
+  },
+  "404": "Ooops! You seem lost."
 }

@@ -1,6 +1,5 @@
 import CounterCart from "../layout/CounterCart";
-import { close, product_1, cal, rate } from "../../assets";
-import { useEffect, useState } from "react";
+import { close, cal, rate } from "../../assets";
 import {
   removeFromCart,
   incCount,

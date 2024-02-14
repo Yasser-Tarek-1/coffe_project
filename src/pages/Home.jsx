@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Button from "../components/layout/Button";
-import Logo from "../components/Logo";
-import { logo_white, home } from "../assets";
+import Logo from "../components/layout/Logo";
+import { home } from "../assets";
+import { useGetInformationQuery } from "../store/apis/Information";
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { data } = useGetInformationQuery();
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
   return (
     <div
       className="min-h-screen h-full relative bg-no-repeat bg-cover bg-center object-cover"
@@ -13,11 +18,13 @@ const Home = () => {
     >
       <div className="bg-[#000000b2] w-full h-full inset-0 absolute">
         <div className="mt-16">
-          <Logo logo={logo_white} />
+          <Logo logo={`https://backend.skilltax.sa/public/${data?.logo}`} />
         </div>
 
-        <div className="w-full my-[73px] h-[38px] bg-secondary font-medium text-[22px] text-primary text-center flex items-center justify-center">
-          <span>{t("home.store")}</span> <span>(عين سكر)</span>{" "}
+        <div className="w-full gap-[5px] my-[73px] h-[38px] bg-secondary font-medium text-[22px] text-primary text-center flex items-center justify-center">
+          <span>
+            {language == "ar" ? data?.ar_business_name : data?.en_business_name}
+          </span>
           <span>{t("home.welcome")}</span>
         </div>
         <div className="flex flex-col items-center gap-[48px]">
