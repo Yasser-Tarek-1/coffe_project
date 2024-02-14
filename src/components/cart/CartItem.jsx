@@ -38,7 +38,7 @@ const CartItem = ({
   };
 
   return (
-    <div className="h-[109px] w-full bg-base shadow_custom rounded-2xl p-4 relative">
+    <div className="h-[109px] w-full bg-base shadow-all rounded-2xl p-4 relative">
       {/* Remove From Cart */}
       <button
         onClick={() => dispatch(removeFromCart(id))}

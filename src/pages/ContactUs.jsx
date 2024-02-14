@@ -58,7 +58,7 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen h-full relative w-full bg-white pb-8">
       {/* Head */}
-      <div className="w-full h-24 bg-base shadow_custom rounded-b-lg flex items-center justify-between pt-12 px-4">
+      <div className="w-full h-24 bg-base shadow-all rounded-b-lg flex items-center justify-between pt-12 px-4">
         <div className="flex items-center gap-2">
           <img src={doc_icon} alt="doc_icon" className="w-6" />
           <h3 className="text-xl font-bold leading-6 text-primary">
@@ -82,7 +82,7 @@ const ContactUs = () => {
         <button
           onClick={() => setMessageTypse(1)}
           name="complaint"
-          className={`w-[90%] block outline-none e font-medium shadow_custom rounded-[11px] text-lg h-16 mx-auto
+          className={`w-[90%] block outline-none e font-medium shadow-all rounded-[11px] text-lg h-16 mx-auto
           ${messageTypse == 1 ? "text-white bg-primary" : "text-black bg-bas"}
           `}
         >
@@ -91,7 +91,7 @@ const ContactUs = () => {
         <button
           onClick={() => setMessageTypse(2)}
           name="suggestion"
-          className={`w-[90%] block outline-none e font-medium shadow_custom rounded-[11px] text-lg h-16 mx-auto
+          className={`w-[90%] block outline-none e font-medium shadow-all rounded-[11px] text-lg h-16 mx-auto
           ${messageTypse == 2 ? "text-white bg-primary" : "text-black bg-bas"}
           `}
         >
@@ -111,7 +111,7 @@ const ContactUs = () => {
             name="sender_name"
             placeholder={t("contactus.write")}
             type="text"
-            className="block w-full outline-none bg-base text-primary mx-auto rounded-lg h-12 placeholder:text-[16px] px-1 shadow_custom"
+            className="block w-full outline-none bg-base text-primary mx-auto rounded-lg h-12 placeholder:text-[16px] px-1 shadow-all"
           />
           {formik.touched.sender_name && formik.errors.sender_name ? (
             <p className="text-xs mt-[2px] text-[#ff0000]">
@@ -124,7 +124,7 @@ const ContactUs = () => {
             {t("contactus.phone")}
           </label>
           <div
-            className="h-12 bg-base shadow_custom rounded-lg overflow-hidden flex items-center"
+            className="h-12 bg-base shadow-all rounded-lg overflow-hidden flex items-center"
             dir="ltr"
           >
             <p className="w-[20%] text-primary border-r border-r-[#d4d1d1] h-full flex items-center justify-center">
@@ -159,7 +159,7 @@ const ContactUs = () => {
             name="message"
             placeholder={t("contactus.write")}
             type="text"
-            className="block w-full outline-none bg-base text-primary mx-auto rounded-lg h-12 placeholder:text-[16px] p-1 shadow_custom min-h-32"
+            className="block w-full outline-none bg-base text-primary mx-auto rounded-lg h-12 placeholder:text-[16px] p-1 shadow-all min-h-32"
           />
           {formik.touched.message && formik.errors.message ? (
             <p className="text-xs mt-[2px] text-[#ff0000]">
@@ -169,7 +169,7 @@ const ContactUs = () => {
         </div>
         <button
           type="submit"
-          className={`w-[90%] block mt-8 outline-none font-medium shadow_custom rounded-[11px] text-lg h-16 mx-auto text-white bg-primary`}
+          className={`w-[90%] block mt-8 outline-none font-medium shadow-all rounded-[11px] text-lg h-16 mx-auto text-white bg-primary`}
         >
           {t("contactus.send")}
         </button>

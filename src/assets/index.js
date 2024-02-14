@@ -18,6 +18,8 @@ import cal from "./cal.svg";
 import doc_icon from "./doc_icon.svg";
 import arrow_back from "./arrow_back.svg";
 import close from "./close.svg";
+import incrementBtn from "./increment.svg";
+import decrementBtn from "./decrement.svg";
 
 export {
   home,
@@ -40,4 +42,6 @@ export {
   doc_icon,
   arrow_back,
   close,
+  incrementBtn,
+  decrementBtn,
 };

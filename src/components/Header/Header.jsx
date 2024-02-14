@@ -18,13 +18,13 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-base w-full h-[184px] rounded-br-lg rounded-bl-[100px] shadow_custom">
+    <div className="bg-base w-full h-[184px] rounded-br-lg rounded-bl-[100px] shadow-all">
       {/* Top Header */}
       <div className="flex items-center justify-between mx-8 pt-[53px]">
         <div className="relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="w-12 border-[2px] border-primary rounded-lg cursor-pointer flex items-center justify-evenly"
+            className="w-12 h-7 border-[2px] border-primary rounded-lg cursor-pointer flex items-center justify-evenly"
           >
             <p className="uppercase text-base font-normal text-primary h-7 flex items-center justify-center">
               {lan == "ar" ? "AR" : "EN"}
@@ -37,7 +37,6 @@ const Header = () => {
               />
             </p>
           </button>
-
           {isOpen && (
             <div className="absolute bg-primary uppercase text-base font-normal text-white left-0 top-[26px] rounded-lg w-12 flex items-center flex-col">
               <button onClick={() => switchLanguage("ar")}>AR</button>

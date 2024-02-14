@@ -4,8 +4,8 @@ export default {
   theme: {
     colors: {
       transparent: "transparent",
-      white: "#FFF",
-      black: "#000",
+      white: "#ffffff",
+      black: "#000000",
       base: "#F2F2F2",
       primary: "#373873",
       secondary: "#FCBD1F",
@@ -14,7 +14,12 @@ export default {
     screens: {
       xs: "430px",
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        all: "0 4px 4px 0px #0000001a",
+        custom: "4px 0px 4px 0px #0000001a",
+      },
+    },
   },
   plugins: [],
 };

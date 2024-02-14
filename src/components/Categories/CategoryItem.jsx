@@ -17,7 +17,7 @@ const CategoryItem = ({
   return (
     <div
       onClick={() => dispatch(filterByCategory(en_name))}
-      className={`relative cursor-pointer w-20 h-20 bg-primary rounded-full flex justify-center bg-cover bg-center object-cover shadow_custom`}
+      className={`relative cursor-pointer w-20 h-20 bg-primary rounded-full flex justify-center bg-cover bg-center object-cover shadow-all`}
       style={{
         backgroundImage: `url(https://backend.skilltax.sa/public/${image})`,
       }}

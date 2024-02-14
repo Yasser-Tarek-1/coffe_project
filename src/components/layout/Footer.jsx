@@ -13,7 +13,7 @@ const Footer = () => {
         <p className=" font-medium text-[16px] text-primary text-center">
           {t("view.send")}
         </p>
-        <Link to={"/contactus"}>
+        <Link to={"/contactus"} className="block">
           <button className="rounded-lg text-[16px] font-normal transition-all bg-primary py-1 px-4 text-[#fff]">
             {t("view.contactUs")}
           </button>

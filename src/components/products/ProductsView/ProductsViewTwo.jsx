@@ -28,7 +28,7 @@ const ProductsViewTwo = ({
   return (
     <div
       onClick={onClick}
-      className="w-full min-h-[109px] rounded-2xl px-4 pt-3 pb-1 bg-base relative shadow_custom cursor-pointer"
+      className="w-full min-h-[109px] rounded-2xl px-4 pt-3 pb-1 bg-base relative shadow-all cursor-pointer"
     >
       {/* Discount */}
       {discount && (

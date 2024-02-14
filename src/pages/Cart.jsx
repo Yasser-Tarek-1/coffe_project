@@ -20,7 +20,7 @@ const Cart = () => {
   return (
     <div className="min-h-screen pb-[380px] h-full relative w-full bg-white ">
       {/* Head */}
-      <div className="w-full h-24 bg-base shadow_custom rounded-b-lg flex items-center justify-between pt-12 px-4 relative z-10">
+      <div className="w-full h-24 bg-base shadow-all rounded-b-lg flex items-center justify-between pt-12 px-4 relative z-10">
         <div className="flex items-center gap-2">
           <img src={cart} alt="doc_icon" className="w-7" />
           <h3 className="text-xl font-bold leading-6 text-primary">
@@ -47,7 +47,7 @@ const Cart = () => {
             </div>
           </div>
           {/* Footer */}
-          <div className="w-full max-h-[350px] bg-white absolute bottom-1 left-0 py-8 shadow_custom_cart rounded-t-[27px]  px-4">
+          <div className="w-full max-h-[350px] bg-white absolute bottom-1 left-0 py-8 shadow-custom rounded-t-[27px]  px-4">
             <h3 className="text-primary text-center text-[16px] font-bold mb-3">
               {t("cart.orderSummary")}
             </h3>

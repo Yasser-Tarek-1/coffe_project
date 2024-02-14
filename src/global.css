@@ -9,13 +9,6 @@ body {
   font-family: "Tajawal", "Open Sans";
 }
 
-.shadow_custom {
-  box-shadow: 0 4px 4px 0px #0000001a;
-}
-.shadow_custom_cart {
-  box-shadow: 4px 0px 4px 0px #0000001a;
-}
-
 /* slick ads*/
 .slick-dots {
   bottom: -10px !important;

@@ -1,11 +1,13 @@
+import { incrementBtn, decrementBtn } from "../../assets";
+
 const CounterCart = ({ count, counterHandler, small }) => {
-  let style = `${
-    small ? "w-5 h-5 text-base" : "w-7 h-7 text-lg"
-  }  bg-secondary1 rounded-full flex items-center justify-center text-[#fff] leading-[0]`;
   return (
     <div className="flex items-center gap-2 mr-1 h-8">
-      <button onClick={() => counterHandler("inc")} className={style}>
-        +
+      <button
+        className={small ? "w-5" : "w-7"}
+        onClick={() => counterHandler("inc")}
+      >
+        <img src={incrementBtn} alt="+" className="w-full" />
       </button>
       <p
         className={`${
@@ -14,8 +16,11 @@ const CounterCart = ({ count, counterHandler, small }) => {
       >
         {count}
       </p>
-      <button onClick={() => counterHandler("dec")} className={style}>
-        −
+      <button
+        className={small ? "w-5" : "w-7"}
+        onClick={() => counterHandler("dec")}
+      >
+        <img src={decrementBtn} alt="-" className="w-full" />
       </button>
     </div>
   );

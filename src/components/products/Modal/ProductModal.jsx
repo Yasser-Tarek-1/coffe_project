@@ -189,10 +189,14 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
         </div>
         {/* Modal Footer */}
         <div className="w-full absolute bottom-1 left-0 py-2 px-4 flex items-center gap-4">
-          <CounterCart counterHandler={counterHandler} count={count} />
+          <CounterCart
+            counterHandler={counterHandler}
+            count={count}
+            small={false}
+          />
           <button
             onClick={addToCartHandler}
-            className="rounded-lg flex-wrap text-[16px] min-h-8  transition-all bg-primary py-1 px-4 text-[#fff] flex items-center justify-between w-full"
+            className="rounded-lg flex-wrap text-[16px] min-h-8 leading-[0] transition-all bg-primary py-1 px-4 text-[#fff] flex items-center justify-between w-full"
           >
             <p className="text-[10px] font-medium">{t("modal.addCart")} </p>
             <p className="text-[16px] text-secondary font-normal">
