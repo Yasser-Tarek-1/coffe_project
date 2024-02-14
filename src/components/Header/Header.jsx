@@ -3,7 +3,7 @@ import { cart, arrow } from "../../assets";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { useGetInformationQuery } from "../../store/apis/Information";
+import { useGetInformationQuery } from "../../store/apis/information";
 import Links from "./Links";
 
 const Header = () => {
@@ -38,7 +38,7 @@ const Header = () => {
             </p>
           </button>
           {isOpen && (
-            <div className="absolute bg-primary uppercase text-base font-normal text-white left-0 top-[26px] rounded-lg w-12 flex items-center flex-col">
+            <div className="absolute pt-[6px] bg-primary uppercase text-base font-normal text-white left-0 top-[26px] rounded-lg w-12 flex items-center flex-col">
               <button onClick={() => switchLanguage("ar")}>AR</button>
               <button onClick={() => switchLanguage("en")}>EN</button>
             </div>

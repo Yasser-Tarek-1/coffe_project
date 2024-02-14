@@ -2,7 +2,7 @@ import Modal from "../components/modal/Modal";
 import { Link } from "react-router-dom";
 import { home } from "../assets";
 import { useTranslation } from "react-i18next";
-import { useGetInformationQuery } from "../store/apis/Information";
+import { useGetInformationQuery } from "../store/apis/information";
 
 const ContactMdl = () => {
   const { data } = useGetInformationQuery();

@@ -14,7 +14,7 @@ const Footer = () => {
           {t("view.send")}
         </p>
         <Link to={"/contactus"} className="block">
-          <button className="rounded-lg text-[16px] font-normal transition-all bg-primary py-1 px-4 text-[#fff]">
+          <button className="rounded-lg text-[16px] font-normal transition-all bg-primary h-8 px-4 text-[#fff]">
             {t("view.contactUs")}
           </button>
         </Link>

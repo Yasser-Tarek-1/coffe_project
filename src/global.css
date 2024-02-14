@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #838486;
   font-family: "Tajawal", "Open Sans";

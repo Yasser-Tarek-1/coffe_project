@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Button from "../components/layout/Button";
 import Logo from "../components/layout/Logo";
 import { home } from "../assets";
-import { useGetInformationQuery } from "../store/apis/Information";
+import { useGetInformationQuery } from "../store/apis/information";
 
 const Home = () => {
   const { data } = useGetInformationQuery();
@@ -21,11 +21,11 @@ const Home = () => {
           <Logo logo={`https://backend.skilltax.sa/public/${data?.logo}`} />
         </div>
 
-        <div className="w-full gap-[5px] my-[73px] h-[38px] bg-secondary font-medium text-[22px] text-primary text-center flex items-center justify-center">
-          <span>
+        <div className="w-full gap-[5px] my-[73px] min-h-[38px] pt-[6px] bg-secondary font-medium text-[22px] text-primary text-center flex items-center justify-center">
+          <p>
             {language == "ar" ? data?.ar_business_name : data?.en_business_name}
-          </span>
-          <span>{t("home.welcome")}</span>
+          </p>
+          <p>{t("home.welcome")}</p>
         </div>
         <div className="flex flex-col items-center gap-[48px]">
           <Link to={"/view"}>

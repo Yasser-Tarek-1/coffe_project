@@ -13,5 +13,5 @@ export const getProductSupplimetariesHandler = (_id, supplimetariesData) => {
       return product_id == _id;
     }
   );
-  return productSupplimetariesFilter; // return object
+  return productSupplimetariesFilter; // return array
 };

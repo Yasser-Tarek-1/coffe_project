@@ -1,7 +1,7 @@
 {
   "home": {
     "store": "Store",
-    "welcome": "Welcome back",
+    "welcome": "Welcomes you again",
     "order": "Order Now",
     "send": "Submit Suggestion or Complaint",
     "aboutUs": "About Us"
@@ -10,7 +10,7 @@
     "contactUs": "Contact Us",
     "inputPlacholder": "Search",
     "discount": "Discount",
-    "currency": "Riyal",
+    "currency": "R.S",
     "tax": "All prices include tax",
     "send": "Do you have a suggestion or complaint?"
   },

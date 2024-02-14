@@ -1,9 +1,6 @@
 import Slider from "react-slick";
 import { useGetCategoriesQuery } from "../../store/apis/products";
 import CategoryItem from "./CategoryItem";
-import { useEffect } from "react";
-import { useState } from "react";
-import { useSelector } from "react-redux";
 
 const settings = {
   dots: false,

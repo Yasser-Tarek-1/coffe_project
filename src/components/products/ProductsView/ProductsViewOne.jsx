@@ -45,16 +45,16 @@ const ProductsViewOne = ({
       />
       <div className="p-2 min-h-[58px] flex flex-col justify-between">
         {/* Deatials */}
-        <div className="flex items-center justify-between">
-          <h3 className="text-[12px] xs:text-[14px] font-bold leading-[16.8px] text-primary flex-1">
+        <div className="flex items-start justify-between">
+          <h3 className="text-[14px] font-bold leading-[16.8px] text-primary flex-1">
             {language == "ar" ? ar_name : en_name}
           </h3>
           <div className="flex items-center gap-1 flex-1 justify-end">
-            <p className="text-[6px] xs:text-[8px] font-medium text-secondary1">
+            <p className="text-[8px] font-medium text-secondary1 mt-[3px]">
               450 CAL
             </p>
             <img src={cal} alt="cal" />
-            <p className="text-[6px] xs:text-[8px] font-medium text-secondary1">
+            <p className="text-[8px] font-medium text-secondary1 mt-[3px]">
               2.3
             </p>
             <img src={rate} alt="rate" />
@@ -66,19 +66,23 @@ const ProductsViewOne = ({
             <h3
               className={`${
                 discount && "line-through"
-              } text-[11px] xs:text-[12px]font-bold leading-[16.8px] text-primary  decoration-[#FF0000]`}
+              } text-[12px] font-bold leading-[16.8px] text-primary  decoration-[#FF0000]`}
             >
               {price_include_tax} {t("view.currency")}
             </h3>
             {discount && (
               <h3
-                className={`text-[11px] xs:text-[12px]font-bold leading-[16.8px] text-primary `}
+                className={`text-[12px]font-bold leading-[16.8px] text-primary `}
               >
                 {price_include_tax} {t("view.currency")}
               </h3>
             )}
           </div>
-          {/* <CounterCart counterHandler={counterHandler} count={count} /> */}
+          {/* <CounterCart
+            counterHandler={counterHandler}
+            count={count}
+            small={true}
+          /> */}
         </div>
       </div>
     </div>

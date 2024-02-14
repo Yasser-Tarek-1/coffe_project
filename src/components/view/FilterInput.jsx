@@ -30,7 +30,7 @@ const FilterInput = ({ toggleShow }) => {
           onChange={(e) => setSearchIn(e.target.value)}
           value={searchIn}
           placeholder={t("view.inputPlacholder")}
-          className=" w-full h-full text-start flex items-center justify-center bg-transparent outline-none border-none text-primary "
+          className=" w-full h-full text-start mt-[2px] flex items-center justify-center bg-transparent outline-none border-none text-primary "
         />
         <img src={search} alt="filter" className="w-4 block ms-3" />
       </div>

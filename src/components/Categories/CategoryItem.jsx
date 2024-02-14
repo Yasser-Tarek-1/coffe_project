@@ -23,7 +23,7 @@ const CategoryItem = ({
       }}
     >
       {en_name != "All" && (
-        <div className="inset-0 absolute h-20 w-20 bg-[#000000B2] rounded-full z-10"></div>
+        <div className="inset-0 absolute h-20 w-20 bg-[#000000a2] rounded-full z-10"></div>
       )}
       <div
         className={`${

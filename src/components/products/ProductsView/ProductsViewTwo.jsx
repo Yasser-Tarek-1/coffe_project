@@ -53,9 +53,13 @@ const ProductsViewTwo = ({
               {language == "ar" ? ar_name : en_name}
             </h3>
             <div className="flex items-center gap-1 flex-1 justify-end">
-              <p className="text-[8px] font-medium text-secondary1">450 CAL</p>
+              <p className="text-[8px] font-medium text-secondary1 mt-[3px]">
+                450 CAL
+              </p>
               <img src={cal} alt="cal" />
-              <p className="text-[8px] font-medium text-secondary1">2.3</p>
+              <p className="text-[8px] font-medium text-secondary1 mt-[3px]">
+                2.3
+              </p>
               <img src={rate} alt="rate" />
             </div>
           </div>
@@ -64,13 +68,13 @@ const ProductsViewTwo = ({
             <h3
               className={`${
                 discount && "line-through"
-              } text-[11px] xs:text-[12px]font-bold leading-[16.8px] text-primary  decoration-[#FF0000]`}
+              } text-[12px] font-bold leading-[16.8px] text-primary  decoration-[#FF0000]`}
             >
               {price_include_tax} {t("view.currency")}
             </h3>
             {discount && (
               <h3
-                className={`text-[11px] xs:text-[12px]font-bold leading-[16.8px] text-primary `}
+                className={`text-[12px] font-bold leading-[16.8px] text-primary `}
               >
                 {price_include_tax} {t("view.currency")}
               </h3>
@@ -78,7 +82,11 @@ const ProductsViewTwo = ({
           </div>
         </div>
         {/* CounterCart */}
-        {/* <CounterCart counterHandler={counterHandler} count={count} /> */}
+        {/* <CounterCart
+          counterHandler={counterHandler}
+          count={count}
+          small={true}
+        /> */}
       </div>
       <hr className="bg-secondary1 w-full h-[2px] my-2" />
       <p className="font-light text-[8px] text-primary leading-[9.6px]">

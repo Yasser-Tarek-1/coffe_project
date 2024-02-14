@@ -23,7 +23,7 @@ const Cart = () => {
       <div className="w-full h-24 bg-base shadow-all rounded-b-lg flex items-center justify-between pt-12 px-4 relative z-10">
         <div className="flex items-center gap-2">
           <img src={cart} alt="doc_icon" className="w-7" />
-          <h3 className="text-xl font-bold leading-6 text-primary">
+          <h3 className="text-xl font-bold leading-6 text-primary mt-[6px]">
             {t("cart.cart")}
           </h3>
         </div>
@@ -34,7 +34,7 @@ const Cart = () => {
           <img src={arrow_back} alt="arrow_back" className="w-5" />
         </button>
       </div>
-      {products.length > 0 ? (
+      {products?.length > 0 ? (
         <>
           <div className="w-full px-4">
             <h3 className="text-xl text-primary font-bold mt-6 mb-4">
@@ -98,10 +98,10 @@ const Cart = () => {
       ) : (
         <div className="w-full h-full absolute flex flex-col items-center justify-center top-0 left-0 leading-3">
           <img src={cart} alt="cart" className="w-36" />
-          <p className="text-xl text-primary"> {t("cart.cartEmpty")}</p>
+          <p className="text-xl text-primary mt-1"> {t("cart.cartEmpty")}</p>
           <button
             onClick={() => history.back(1)}
-            className=" underline text-secondary1 font-semibold"
+            className="underline text-secondary1 font-semibold"
           >
             {t("cart.goBack")}
           </button>

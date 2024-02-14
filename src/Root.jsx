@@ -22,6 +22,7 @@ function Root() {
       ...window.process,
     };
   }, []);
+
   return (
     <div className="w-full max-w-[480px] mx-auto min-h-screen h-full relative">
       <Toaster

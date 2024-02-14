@@ -6,6 +6,7 @@ import { useState } from "react";
 import { addToCart } from "../../../store/slices/cartSlice";
 import { useTranslation } from "react-i18next";
 import toast from "react-hot-toast";
+import Button from "../../layout/Button";
 
 const ProductModal = ({ isOpen, closeModalHandler }) => {
   const {
@@ -188,22 +189,27 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
           </div>
         </div>
         {/* Modal Footer */}
-        <div className="w-full absolute bottom-1 left-0 py-2 px-4 flex items-center gap-4">
-          <CounterCart
-            counterHandler={counterHandler}
-            count={count}
-            small={false}
-          />
-          <button
-            onClick={addToCartHandler}
-            className="rounded-lg flex-wrap text-[16px] min-h-8 leading-[0] transition-all bg-primary py-1 px-4 text-[#fff] flex items-center justify-between w-full"
-          >
-            <p className="text-[10px] font-medium">{t("modal.addCart")} </p>
-            <p className="text-[16px] text-secondary font-normal">
-              {((price_include_tax + isChecked.price) * count).toFixed(2)}{" "}
-              {t("view.currency")}
-            </p>
-          </button>
+        <div className="w-full absolute bottom-1 left-0 py-2 px-4 ">
+          <div className="w-full h-full flex items-center gap-4">
+            <CounterCart
+              counterHandler={counterHandler}
+              count={count}
+              small={false}
+            />
+
+            <button
+              onClick={addToCartHandler}
+              className="flex-[2] bg-primary h-9 w-full rounded-lg flex items-center text-center justify-between px-2 l"
+            >
+              <p className="text-center text-white text-xs mt-[6px]">
+                {t("modal.addCart")}
+              </p>
+              <div className=" items-center justify-center text-base text-secondary mt-2  leading-[19.2px]">
+                {((price_include_tax + isChecked.price) * count).toFixed(2)}{" "}
+                {t("view.currency")}
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </Modal>

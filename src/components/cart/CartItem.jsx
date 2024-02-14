@@ -52,7 +52,7 @@ const CartItem = ({
       <div className="flex items-center justify-between me-8 h-[77px]">
         {/* right */}
         {/* right Body */}
-        <div className="flex items-start justify-center gap-2">
+        <div className="flex items-start justify-center gap-2 ">
           <div className="h-full">
             <div>
               <img
@@ -62,9 +62,13 @@ const CartItem = ({
               />
             </div>
             <div className="flex items-center gap-1 flex-1 justify-end">
-              <p className="text-[8px] font-medium text-secondary1">450 CAL</p>
+              <p className="text-[8px] font-medium text-secondary1 mt-[3px]">
+                450 CAL
+              </p>
               <img src={cal} alt="cal" />
-              <p className="text-[8px] font-medium text-secondary1">2.3</p>
+              <p className="text-[8px] font-medium text-secondary1 mt-[3px]">
+                2.3
+              </p>
               <img src={rate} alt="rate" />
             </div>
           </div>
@@ -96,8 +100,13 @@ const CartItem = ({
               <p className="text-[#37387380] text-[8px] font-bold">
                 {t("cart.size")}
               </p>
-              <p className="text-[#37387380] text-[8px] font-bold">
-                {t("modal.addOns")}
+              <p className="text-[#37387380] text-[8px] font-bold flex items-center gap-1">
+                {t("modal.addOns")}:
+                <p>
+                  {language == "ar"
+                    ? supplimetaries?.ar_name
+                    : supplimetaries?.en_name}
+                </p>
               </p>
               <p className="text-[#37387380] text-[8px] font-bold">
                 {t("cart.nots")}
