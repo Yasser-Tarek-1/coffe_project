@@ -26,7 +26,7 @@ const Header = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="w-12 h-7 border-[2px] border-primary rounded-lg cursor-pointer flex items-center justify-evenly"
           >
-            <p className="uppercase text-base font-normal text-primary h-7h-7 flex items-center justify-center">
+            <p className="uppercase text-base font-normal text-primary h-7 flex items-center justify-center">
               {lan == "ar" ? "AR" : "EN"}
             </p>
             <p className="h-7 flex items-center justify-center">
@@ -37,6 +37,12 @@ const Header = () => {
               />
             </p>
           </button>
+          {/* <button onClick={() => setIsOpen(!isOpen)} className="bt-lang">
+            <p className="text">{lan == "ar" ? "AR" : "EN"}</p>
+            <p className="img">
+              <img src={arrow} alt="arrow_icon" />
+            </p>
+          </button> */}
           {isOpen && (
             <div className="absolute bg-primary uppercase text-base font-normal text-white left-0 top-[26px] rounded-lg w-12 flex items-center flex-col">
               <button onClick={() => switchLanguage("ar")}>AR</button>

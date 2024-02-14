@@ -37,3 +37,37 @@ body {
 .category .slick-list {
   overflow: visible !important;
 }
+
+/* test */
+.bt-lang {
+  width: 48px;
+  height: 28px;
+  border: 2px solid #373873;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bt-lang .text {
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bt-lang .img {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bt-lang .img {
+  width: 9px;
+  display: block;
+  height: 100%;
+}
