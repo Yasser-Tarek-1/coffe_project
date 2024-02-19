@@ -6,21 +6,18 @@ import {
   getSupplimetaries,
   clearModalData,
 } from "../../store/slices/modalSlice";
-import {
-  useGetProductsQuery,
-  useGetSupplimetariesQuery,
-} from "../../store/apis/products";
+import { useGetProductsQuery } from "../../store/apis/products";
+import { useGetSupplimetariesQuery } from "../../store/apis/supplimetaries";
 // Data Filtering
 import {
   getProductSupplimetariesHandler,
   getProductHandler,
 } from "../../services";
 // Components
-import ProductsViewOne from "./ProductsView/ProductsViewOne";
-import ProductsViewTwo from "./ProductsView/ProductsViewTwo";
 import ProductModal from "./Modal/ProductModal";
 import { allfilteredProducts } from "../../store/slices/filterDataSlice";
 import { useTranslation } from "react-i18next";
+import ProductItem from "./product/ProductItem";
 
 const Products = ({ toggle }) => {
   const { data, isLoading, isSuccess } = useGetProductsQuery();
@@ -100,13 +97,22 @@ const Products = ({ toggle }) => {
               </div>
             )}
           </div>
+        ) : data.length == 0 ? (
+          <div className="mt-8 w-full">
+            {language == "ar" ? (
+              <div className="w-full">لا يوجد منتجات حاليا</div>
+            ) : (
+              <div className="w-full">There are no products currently</div>
+            )}
+          </div>
         ) : (
           <div className="mt-8">
             {toggle ? (
               <div className="w-full h-full flex flex-wrap gap-2 xs:gap-4">
                 {filteredProducts?.map(({ id, ...items }) => {
                   return (
-                    <ProductsViewOne
+                    <ProductItem
+                      toggle={toggle}
                       key={id}
                       id={id}
                       {...items}
@@ -119,7 +125,8 @@ const Products = ({ toggle }) => {
               <div className="w-full h-full flex flex-col gap-[18px]">
                 {filteredProducts?.map(({ id, ...items }) => {
                   return (
-                    <ProductsViewTwo
+                    <ProductItem
+                      toggle={toggle}
                       key={id}
                       id={id}
                       {...items}

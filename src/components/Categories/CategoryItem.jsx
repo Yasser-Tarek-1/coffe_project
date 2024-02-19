@@ -6,7 +6,7 @@ const CategoryItem = ({
   id,
   image,
   icon,
-  ar_name = "الجميع",
+  ar_name = "الكل",
   en_name = "All",
   ...prop
 }) => {
@@ -22,16 +22,15 @@ const CategoryItem = ({
         backgroundImage: `url(https://backend.skilltax.sa/public/${image})`,
       }}
     >
-      {en_name != "All" && (
-        <div className="inset-0 absolute h-20 w-20 bg-[#000000a2] rounded-full z-10"></div>
-      )}
+      <div className="inset-0 absolute h-20 w-20 bg-[#000000a2] rounded-full z-10"></div>
+
       <div
         className={`${
           icon ? "mt-3" : "justify-center"
         } flex flex-col relative z-20 gap-4`}
       >
         {icon && <img src={icon} alt="icon" className="h-[20px]" />}
-        <h4 className="font-bold leading-[9.6px] text-[8px] w-[35px] h-[15px] text-center text-white capitalize">
+        <h4 className="font-bold text-xs w-[60px] h-[15px] text-center text-white capitalize flex items-center justify-center">
           {language == "ar" ? ar_name : en_name}
         </h4>
       </div>

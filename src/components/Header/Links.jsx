@@ -8,13 +8,14 @@ import {
   document,
 } from "../../assets";
 import { Link } from "react-router-dom";
+import { MENU_ID } from "../../constants";
 
 const Links = () => {
   const { data } = useGetSettingsQuery();
 
   return (
     <div className="flex items-center justify-center gap-4">
-      <Link to={"/contactus"}>
+      <Link to={`/${MENU_ID}/contactus`}>
         <img src={document} alt={"document"} className="w-6" />
       </Link>
       {data?.twitter_link && (

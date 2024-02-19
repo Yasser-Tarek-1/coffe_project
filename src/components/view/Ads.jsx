@@ -20,7 +20,7 @@ const Ads = () => {
         <>
           {data?.image_one && data?.image_two ? (
             <Slider {...settings}>
-              <div className="h-[200px] mt-8 rounded-2xl overflow-hidden">
+              <div className="h-[235px] mt-8 rounded-2xl overflow-hidden">
                 <a href="#" className="w-full h-full outline-none">
                   <img
                     src={`https://backend.skilltax.sa/public/${data?.image_one}`}
@@ -29,7 +29,7 @@ const Ads = () => {
                   />
                 </a>
               </div>
-              <div className="h-[200px] mt-8 rounded-2xl overflow-hidden">
+              <div className="h-[235px] mt-8 rounded-2xl overflow-hidden">
                 <a href="#" className="w-full h-full outline-none">
                   <img
                     src={`https://backend.skilltax.sa/public/${data?.image_two}`}
@@ -39,7 +39,7 @@ const Ads = () => {
                 </a>
               </div>
               {data?.image_three && (
-                <div className="h-[200px] mt-8 rounded-2xl overflow-hidden">
+                <div className="h-[235px] mt-8 rounded-2xl overflow-hidden">
                   <a href="#" className="w-full h-full outline-none">
                     <img
                       src={`https://backend.skilltax.sa/public/${data?.image_three}`}
@@ -51,7 +51,7 @@ const Ads = () => {
               )}
             </Slider>
           ) : (
-            <div className="h-[200px] mt-8 rounded-2xl overflow-hidden">
+            <div className="h-[235px] mt-8 rounded-2xl overflow-hidden">
               <a href="#" className="w-full h-full outline-none">
                 <img
                   src={`https://backend.skilltax.sa/public/${data?.image_one}`}

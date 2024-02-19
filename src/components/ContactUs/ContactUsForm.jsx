@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { useSendMsgMutation } from "../../store/apis/userMessages";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { MENU_ID } from "../../constants";
 
 const ContactUsForm = () => {
   const [sendMsg, { isLoading }] = useSendMsgMutation();
@@ -22,7 +23,8 @@ const ContactUsForm = () => {
       message: "",
     },
     validationSchema: Yup.object({
-      sender_name: Yup.string().required(t("contactus.form.required")),
+      sender_name: Yup.string(),
+      // .required(t("contactus.form.required"))
       phone_number: Yup.string()
         .required(t("contactus.form.required"))
         .test(
@@ -42,7 +44,8 @@ const ContactUsForm = () => {
       sendMsg({ ...values, message_type: messageTypse })
         .unwrap()
         .then(() => {
-          navigate("/contactus/done");
+          navigate("done");
+          navigate(`/${MENU_ID}/contactus/done`);
         })
         .catch(() => {
           language == "ar"

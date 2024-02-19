@@ -10,7 +10,7 @@ import ContactMdl from "./pages/ContactMdl";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/:menuId",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
@@ -19,23 +19,23 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/view",
+        path: "view",
         element: <View />,
       },
       {
-        path: "/contactus",
+        path: "contactus",
         element: <ContactUs />,
       },
       {
-        path: "/contactus/done",
+        path: "contactus/done",
         element: <ContactMdl />,
       },
       {
-        path: "/aboutus",
+        path: "aboutus",
         element: <AboutUs />,
       },
       {
-        path: "/cart",
+        path: "cart",
         element: <Cart />,
       },
     ],

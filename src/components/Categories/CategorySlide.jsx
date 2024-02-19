@@ -1,10 +1,10 @@
 import Slider from "react-slick";
-import { useGetCategoriesQuery } from "../../store/apis/products";
+import { useGetCategoriesQuery } from "../../store/apis/categories";
 import CategoryItem from "./CategoryItem";
 
 const settings = {
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 150,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -14,19 +14,26 @@ const settings = {
 
 const CategorySlide = () => {
   let { data, isLoading, isSuccess } = useGetCategoriesQuery();
+  let ran = 0;
+  let allCategoiresImage = "";
+
+  if (data) {
+    ran = Math.floor(Math.random() * data?.length);
+    allCategoiresImage = data[ran]?.image;
+  }
 
   return (
     <div className="mt-4 category">
-      {!isLoading && isSuccess && data?.length >= 3 ? (
+      {!isLoading && isSuccess && data?.length >= 4 ? (
         <Slider {...settings}>
-          <CategoryItem />
+          <CategoryItem image={allCategoiresImage} />
           {data?.map(({ id, ...items }) => {
             return <CategoryItem key={id} id={id} {...items} />;
           })}
         </Slider>
       ) : (
-        <div className="w-full flex justify-start items-center gap-4">
-          <CategoryItem />
+        <div className="w-full flex items-center justify-between">
+          <CategoryItem image={allCategoiresImage} />
           {data?.map(({ id, ...items }) => {
             return <CategoryItem key={id} id={id} {...items} />;
           })}

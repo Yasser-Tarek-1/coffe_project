@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { MENU_ID } from "../../constants";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ const Footer = () => {
         <p className=" font-medium text-[16px] text-primary text-center">
           {t("view.send")}
         </p>
-        <Link to={"/contactus"} className="block">
+        <Link to={`/${MENU_ID}/contactus`} className="block">
           <button className="rounded-lg text-[16px] font-normal transition-all bg-primary h-8 px-4 text-[#fff]">
             {t("view.contactUs")}
           </button>

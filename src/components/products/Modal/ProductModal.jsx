@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { rate } from "../../../assets";
 import Modal from "../../modal/Modal";
 import CounterCart from "../../layout/CounterCart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { addToCart } from "../../../store/slices/cartSlice";
 import { useTranslation } from "react-i18next";
 import toast from "react-hot-toast";
@@ -27,23 +27,34 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
     supplimetaries,
   } = useSelector((state) => state.modalSlice);
   const [count, setCount] = useState(1);
-  const [isChecked, setIsChecked] = useState({
-    id: null,
-    price: 0,
-    ar_name: "",
-    en_name: "",
+  const [supplimetariesChecked, setSupplimetariesChecked] = useState([]);
+  let totalSupplimetariesPrice = 0;
+
+  // Collect add-on prices
+  supplimetariesChecked.forEach((sup) => {
+    totalSupplimetariesPrice += sup.price_include_tax;
   });
 
-  // Checked
-  const CheckedHandler = (object) => {
-    if (isChecked.id == null) {
-      setIsChecked(object);
+  // Supplimetaries Checked Handler
+  const supplimetariesCheckedHandler = (object) => {
+    let existingSup = supplimetariesChecked.find((sup) => {
+      return sup.id == object.id;
+    });
+
+    if (!existingSup) {
+      setSupplimetariesChecked((prev) => {
+        return [...prev, object];
+      });
     } else {
-      setIsChecked({ id: null, price: 0, ar_name: "", en_name: "" });
+      setSupplimetariesChecked((prev) => {
+        return prev.filter((sup) => {
+          return sup.id != object.id;
+        });
+      });
     }
   };
 
-  // Counter
+  // Counter + or -
   const counterHandler = (type) => {
     if (type == "dec" && count > 1) {
       setCount(count - 1);
@@ -56,7 +67,7 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
   // Close Modal And Clear Modal Handler
   const closeModalAndClearModalHandler = () => {
     closeModalHandler();
-    setIsChecked({ id: null, price: 0, ar_name: "", en_name: "" });
+    setSupplimetariesChecked([]);
     setCount(1);
   };
 
@@ -74,7 +85,7 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
         discount,
       },
       count,
-      supplimetaries: { ...isChecked },
+      supplimetaries: [...supplimetariesChecked],
     };
     dispatch(addToCart(product));
     closeModalAndClearModalHandler();
@@ -111,29 +122,7 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
               language == "ar" ? "text-right" : "text-left"
             } w-full mx-auto text-primary font-light leading-4 text-[12px]`}
           >
-            {description != "null" &&
-            description != null &&
-            description != "شاي" ? (
-              description
-            ) : language == "ar" ? (
-              <>
-                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
-                العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                التطبيق.هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد
-                تم توليد هذا النص من مولد النص العربى،
-              </>
-            ) : (
-              <>
-                This text is an example of text that can be replaced in the same
-                space. This text was generated from the Arabic text generator,
-                where you can generate such text or many other texts in addition
-                to increasing the number of letters that the application
-                generates. This text is an example of text that can be Replace
-                in the same space. This text was generated from the Arabic text
-                generator,
-              </>
-            )}
+            {description != "null" && description != null && description}
           </p>
         </div>
         {/* addition */}
@@ -141,32 +130,37 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
           <div className="w-full flex items-start gap-3">
             {supplimetaries?.length > 0 && (
               <>
-                <div className="bg-secondary1 border-secondary1 border-[1px] min-w-16 min-h-8 rounded-lg text-[11px] font-normal leading-3 text-white flex items-center justify-center">
+                <div className="bg-secondary1 text-center border-secondary1 border-[1px] min-w-16 min-h-8 rounded-lg text-[11px] font-normal leading-3 text-white flex items-center justify-center">
                   {t("modal.addOns")}{" "}
                 </div>
                 <ul className="w-full flex items-center gap-1 flex-wrap">
                   {supplimetaries?.map(
                     ({ id, price_include_tax, ar_name, en_name }) => {
+                      const isSelected = supplimetariesChecked.some(
+                        (sup) => sup.id === id
+                      );
                       return (
                         <li key={id}>
                           <label
                             id={id}
                             onClick={() =>
-                              CheckedHandler({
+                              supplimetariesCheckedHandler({
                                 id,
-                                price: price_include_tax,
+                                price_include_tax,
                                 ar_name,
                                 en_name,
                               })
                             }
                             htmlFor={id}
-                            className={`border-primary border-[1px] flex-col cursor-pointer min-h-8 rounded-lg text-[11px] font-normal flex items-center justify-center ${
-                              isChecked?.id == id
-                                ? "text-white bg-primary"
-                                : "text-primary bg-white"
-                            }`}
+                            className={`border-primary border-[1px] flex-col cursor-pointer min-h-8 rounded-lg text-[11px] font-normal flex items-center justify-center
+                             ${
+                               isSelected
+                                 ? "text-white bg-primary"
+                                 : "text-primary bg-white"
+                             }
+                            )}`}
                           >
-                            <div className="flex items-center justify-center gap-1 px-2">
+                            <div className="flex items-center justify-center gap-1 px-2 mt-1">
                               <span>
                                 {language == "ar" ? ar_name : en_name}
                               </span>{" "}
@@ -205,7 +199,10 @@ const ProductModal = ({ isOpen, closeModalHandler }) => {
                 {t("modal.addCart")}
               </p>
               <div className=" items-center justify-center text-base text-secondary mt-2  leading-[19.2px]">
-                {((price_include_tax + isChecked.price) * count).toFixed(2)}{" "}
+                {(
+                  (price_include_tax + totalSupplimetariesPrice) *
+                  count
+                ).toFixed(2)}{" "}
                 {t("view.currency")}
               </div>
             </button>

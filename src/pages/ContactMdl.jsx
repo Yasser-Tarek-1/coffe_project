@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { home } from "../assets";
 import { useTranslation } from "react-i18next";
 import { useGetInformationQuery } from "../store/apis/basicInformation";
+import { MENU_ID } from "../constants";
 
 const ContactMdl = () => {
-  const { data } = useGetInformationQuery();
+  const { data, isError, error } = useGetInformationQuery();
+
   const {
     t,
     i18n: { language },
@@ -27,7 +29,7 @@ const ContactMdl = () => {
           <p className="text-[14px] font-medium leading-4">
             {t("contactus.thx")}
           </p>
-          <Link to={"/"} className="underline font-semibold mt-2">
+          <Link to={`/${MENU_ID}`} className="underline font-semibold mt-2">
             {t("contactus.homePage")}
           </Link>
         </div>

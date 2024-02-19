@@ -5,22 +5,29 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useGetInformationQuery } from "../../store/apis/basicInformation";
 import Links from "./Links";
+import { MENU_ID } from "../../constants";
 
 const Header = () => {
-  const { data } = useGetInformationQuery();
+  const { data, isError, error } = useGetInformationQuery();
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const lan = i18n.language;
+
   const switchLanguage = (lang) => {
     i18n.changeLanguage(lang);
     localStorage.setItem("lng", lang);
     setIsOpen(false);
   };
 
+  if (isError) {
+    console.log(error);
+  }
+
   return (
-    <div className="bg-base w-full h-[184px] rounded-br-lg rounded-bl-[100px] shadow-all">
+    <div className="bg-base w-full h-full min-h-[184px] rounded-br-lg rounded-bl-[100px] shadow-all flex flex-col justify-end">
       {/* Top Header */}
-      <div className="flex items-center justify-between mx-8 pt-[53px]">
+      {/* pt-[53px] */}
+      <div className="flex items-center justify-between mx-8">
         <div className="relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -44,10 +51,10 @@ const Header = () => {
             </div>
           )}
         </div>
-        <Link to={"/"}>
+        <Link to={`/${MENU_ID}`}>
           <Logo logo={`https://backend.skilltax.sa/public/${data?.logo}`} />
         </Link>
-        <Link to="/cart">
+        <Link to={`/${MENU_ID}/cart`}>
           <img src={cart} alt="cart_icon" className="w-7" />
         </Link>
       </div>

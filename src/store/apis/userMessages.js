@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { MENU_ID, API_URL } from "../../constants";
 
-let MENU_ID = 700000;
-let API_URL = "https://backend.skilltax.sa/api/v1/menu/";
-
+// Define an API slice using createApi
 export const userMessagesApi = createApi({
   reducerPath: "userMessagesApi",
   baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
+  tagTypes: ["userMessagesApi"],
   endpoints: (builder) => ({
     sendMsg: builder.mutation({
       query: (body) => ({
@@ -13,6 +13,7 @@ export const userMessagesApi = createApi({
         method: "POST",
         body,
       }),
+      invalidatesTags: ["userMessagesApi"],
     }),
   }),
 });

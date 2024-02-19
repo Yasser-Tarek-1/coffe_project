@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Header from "../components/Header/Header";
 import { useGetSettingsQuery } from "../store/apis/menuSettings";
+import { useEffect } from "react";
 
 const AboutUs = () => {
   const { data } = useGetSettingsQuery();
@@ -8,6 +9,10 @@ const AboutUs = () => {
     t,
     i18n: { language },
   } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen h-full relative w-full bg-white pb-8">

@@ -1,16 +1,16 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
-let MENU_ID = 700000;
-let API_URL = "https://backend.skilltax.sa/api/v1/menu/";
+import { MENU_ID, API_URL } from "../../constants";
 
 export const basicInformationApi = createApi({
   reducerPath: "basicInformationApi",
   baseQuery: fetchBaseQuery({
     baseUrl: API_URL,
   }),
+  tagTypes: ["basicInformationApi"],
   endpoints: (builder) => ({
     getInformation: builder.query({
       query: () => `basic-info/${MENU_ID}`,
+      providesTags: ["basicInformationApi"],
     }),
   }),
 });

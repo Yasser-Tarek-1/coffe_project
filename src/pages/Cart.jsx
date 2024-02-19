@@ -56,7 +56,7 @@ const Cart = () => {
                 {t("cart.orderTotal")}
               </p>
               <p className="text-primary text-[16px] font-bold">
-                {totalPrice.toFixed(2)} {t("view.currency")}
+                {totalPrice?.toFixed(2)} {t("view.currency")}
               </p>
             </div>
             <div className="flex items-center justify-between mb-1">
@@ -79,19 +79,19 @@ const Cart = () => {
                 {t("cart.total")}
               </p>
               <p className="text-primary text-[16px] font-bold">
-                {totalPrice.toFixed(2)} {t("view.currency")}
+                {totalPrice?.toFixed(2)} {t("view.currency")}
               </p>
             </div>
             <>
               <p className=" font-bold text-[16px] text-[#37387380] text-center mt-10">
                 {t("view.tax")} 15%
               </p>
-              <button className="rounded-lg text-[16px] h-16 font-bold transition-all bg-primary py-1 px-4 text-[#fff] flex items-center gap-6 justify-center w-full">
+              {/* <button className="rounded-lg text-[16px] h-16 font-bold transition-all bg-primary py-1 px-4 text-[#fff] flex items-center gap-6 justify-center w-full">
                 <p>{t("cart.getOrder")}</p>
                 <p>
-                  {totalPrice.toFixed(2)} {t("view.currency")}
+                  {totalPrice.toFixed(3)} {t("view.currency")}
                 </p>
-              </button>
+              </button> */}
             </>
           </div>
         </>
